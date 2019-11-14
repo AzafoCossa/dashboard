@@ -1,0 +1,26 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "A simple dashboard design with HTML & CSS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AzafoCossa/dashboard.git"
+  },
+  "keywords": [
+    "Dashboard",
+    "HTML",
+    "CSS",
+    "Web",
+    "Design"
+  ],
+  "author": "Azafo Cossa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AzafoCossa/dashboard/issues"
+  },
+  "homepage": "https://github.com/AzafoCossa/dashboard#readme"
+}

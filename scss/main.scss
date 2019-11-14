@@ -1,0 +1,90 @@
+@import 'variables';
+@import 'utilities';
+
+// CSS Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: grid;
+    grid-template-areas: 'sidebar maincontent maincontent';
+    grid-template-columns: 250px minmax(auto, 100%);
+    width: 100%;
+    height: 100%;
+
+    .side {
+        &-bar {
+            background: $dark-color;
+            height: 100%;
+            width: 100%;
+            grid-area: sidebar;
+
+            .section-tittle {
+                display: grid;
+                align-items: center;
+                width: 100%;
+                height: 70px;
+                background: $danger-color;
+                color: set-text-color($danger-color);
+                font-size: 1.1rem;
+            }
+
+
+            .list {
+                // padding: 10px;
+
+                li {
+                    list-style: none;
+                    font-size: 1.2rem;
+                    padding: 10px;
+                    border-bottom: 1px solid $medium-color;
+                    width: 100%;
+
+                    &:hover {
+                        background: $primary-color;
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $light-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &-content {
+        grid-area: maincontent;
+        width: 100%;
+        height: 100%;
+        background: $white-color;
+
+        .section-tittle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $dark-color;
+            font-size: 1.2rem;
+
+            .user {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

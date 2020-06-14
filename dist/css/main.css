@@ -13,16 +13,22 @@
 .main {
   display: grid;
   grid-template-areas: 'sidebar maincontent maincontent';
-  grid-template-columns: 250px minmax(auto, 100%);
+  grid-template-columns: minmax(auto, 250px) minmax(auto, 100%);
   width: 100%;
-  height: 100%; }
+  height: 100vh; }
   .main .side-bar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
     background: #3A405A;
     height: 100%;
-    width: 100%;
-    grid-area: sidebar; }
+    max-width: 100%;
+    grid-area: sidebar;
+    transition: all .4s; }
     .main .side-bar .section-tittle {
-      display: grid;
+      display: flex;
+      flex-direction: row;
       align-items: center;
       width: 100%;
       height: 70px;
@@ -33,14 +39,19 @@
       list-style: none;
       font-size: 1.2rem;
       padding: 10px;
-      border-bottom: 1px solid #FFC2E2;
-      width: 100%; }
+      border-top: 1px solid rgba(240, 156, 156, 0.109);
+      border-bottom: 1px solid black;
+      width: 100%;
+      transition: padding .4s; }
+      .main .side-bar .list li i {
+        margin-right: 0.2rem; }
       .main .side-bar .list li:hover {
-        background: #6E44FF; }
-      .main .side-bar .list li:last-child {
-        border-bottom: none; }
+        padding-left: 20px;
+        opacity: .8; }
       .main .side-bar .list li a {
         text-decoration: none;
+        line-height: 35px;
+        padding-left: 10px;
         color: #F4F1DE; }
   .main-content {
     grid-area: maincontent;
@@ -60,5 +71,42 @@
         .main-content .section-tittle .user img {
           width: 50px;
           height: 50px;
+          border: 2px solid #3A405A;
           border-radius: 50%;
           margin-right: 10px; }
+
+#open-menu {
+  display: none; }
+
+label #close-menu-btn,
+label #open-menu-btn {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1111;
+  background-color: #3A405A;
+  border-radius: .2rem; }
+
+label #open-menu-btn {
+  left: 40px;
+  top: 25px;
+  color: #fff;
+  padding: .3rem;
+  transition: all .4s; }
+
+label #close-menu-btn {
+  left: 210px;
+  top: -50px;
+  color: red;
+  padding: .3rem;
+  transition: all .4s; }
+
+#open-menu:checked ~ .side-bar {
+  left: 0; }
+
+#open-menu:checked ~ label #open-menu-btn {
+  pointer-events: none;
+  opacity: 0;
+  left: -75px; }
+
+#open-menu:checked ~ label #close-menu-btn {
+  top: 10px; }

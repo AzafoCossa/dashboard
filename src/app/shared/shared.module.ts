@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AreaComponent } from './widgets/area/area.component';
+import { PieComponent } from './widgets/pie/pie.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AreaComponent } from './widgets/area/area.component';
     FooterComponent,
     AreaComponent,
     CardComponent,
+    PieComponent,
   ],
   imports: [
     CommonModule,
@@ -45,6 +47,7 @@ import { AreaComponent } from './widgets/area/area.component';
     SidebarComponent,
     AreaComponent,
     CardComponent,
+    PieComponent,
   ],
 })
 export class SharedModule {}

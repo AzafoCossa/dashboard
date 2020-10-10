@@ -26,5 +26,6 @@ import { DashboardComponent } from './../../modules/dashboard/dashboard.componen
     MatPaginatorModule,
     MatTableModule,
   ],
+  providers: [DashboardService],
 })
 export class DefaultModule {}

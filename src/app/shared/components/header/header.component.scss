@@ -1,0 +1,23 @@
+ul li {
+  list-style: none;
+}
+
+.profile-card {
+  text-align: center;
+  padding: 1rem;
+
+  img {
+    border: 3px solid #adb5bd;
+    margin: 0 auto;
+    padding: 3px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}
+
+.text-pro {
+  font-weight: 500;
+  margin-top: 0;
+  padding-top: 0;
+}

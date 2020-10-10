@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="toggleSideBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>APP LOGO</span>
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGap="20px">
+        <li>
+          <button mat-icon-button><mat-icon>settings</mat-icon></button>
+        </li>
+        <li>
+          <button mat-icon-button><mat-icon>help_outline</mat-icon></button>
+        </li>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>person_outline</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <mat-nav-list>
+              <div class="profile-card">
+                <img
+                  src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                  alt=""
+                />
+                <div class="header">
+                  <h2>Azafo Cossa</h2>
+                  <p class="text-pro">Software Developer</p>
+                </div>
+              </div>
+            </mat-nav-list>
+            <mat-divider></mat-divider>
+            <button mat-button>
+              <mat-icon>exit_to_app</mat-icon>&nbsp;Logout
+            </button>
+            <button mat-button>
+              <mat-icon>perm_identity</mat-icon>&nbsp;Profile
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
